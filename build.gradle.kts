@@ -1,3 +1,5 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 val ktor_version: String by project
 val kotlin_version: String by project
 val logback_version: String by project
@@ -59,7 +61,7 @@ tasks.withType<Jar> {
     }
 }
 
-tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
+tasks.withType<ShadowJar> {
     manifest {
         attributes(
             mapOf(

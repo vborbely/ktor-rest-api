@@ -1,6 +1,7 @@
 package com.anysolutions.ktor_rest_api
 
 import com.anysolutions.ktor_rest_api.config.configureDatabase
+import com.anysolutions.ktor_rest_api.error.configureErrorHandling
 import com.anysolutions.ktor_rest_api.plugins.configureHTTP
 import com.anysolutions.ktor_rest_api.plugins.configureRouting
 import com.anysolutions.ktor_rest_api.plugins.configureSerialization
@@ -30,6 +31,7 @@ fun Application.main() {
     configureRouting()
     configureHTTP()
     configureSerialization()
+    configureErrorHandling()
     install(DefaultHeaders)
     install(CallLogging)
     install(Koin) {

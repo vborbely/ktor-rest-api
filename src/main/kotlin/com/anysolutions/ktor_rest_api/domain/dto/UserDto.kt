@@ -2,6 +2,7 @@ package com.anysolutions.ktor_rest_api.domain.dto
 
 import com.anysolutions.ktor_rest_api.domain.entities.User
 import com.fasterxml.jackson.annotation.JsonIgnore
+import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.annotation.JsonProperty
 import kotlinx.serialization.Serializable
 import org.jetbrains.annotations.Nullable
@@ -11,6 +12,7 @@ import org.valiktor.functions.isPositive
 import org.valiktor.validate
 
 @Serializable
+@JsonInclude(JsonInclude.Include.NON_NULL)
 data class UserDto(
     @JsonIgnore
     @Nullable

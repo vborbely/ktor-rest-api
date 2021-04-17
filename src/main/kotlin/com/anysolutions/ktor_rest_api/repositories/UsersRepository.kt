@@ -45,25 +45,25 @@ class UsersRepository {
         return user
     }
 
-    fun getById(id: Long): User {
+    fun getById(id: Long): User? {
         return transaction {
-            UserEntity.select(Op.build { UserEntity.id eq id }).map { UserEntity.to(it) }.first()
+            UserEntity.select(Op.build { UserEntity.id eq id }).map { UserEntity.to(it) }.firstOrNull()
         }
     }
 
-    fun getByExtId(id: String): User {
+    fun getByExtId(id: String): User? {
         return transaction {
-            UserEntity.select(Op.build { UserEntity.extId eq id }).map { UserEntity.to(it) }.first()
+            UserEntity.select(Op.build { UserEntity.extId eq id }).map { UserEntity.to(it) }.firstOrNull()
         }
     }
 
-    fun delete(id: Long){
+    fun delete(id: Long) {
         return transaction {
             UserEntity.deleteWhere { Op.build { UserEntity.id eq id } }
         }
     }
 
-    fun deleteByExtId(id: String){
+    fun deleteByExtId(id: String) {
         return transaction {
             UserEntity.deleteWhere { Op.build { UserEntity.extId eq id } }
         }

@@ -12,15 +12,19 @@ class UsersServices {
         return usersRepository.getAll()
     }
 
-    fun getById(id: Long): User {
+    fun getById(id: Long): User? {
         return usersRepository.getById(id)
+    }
+
+    fun getByExtId(id: String): User? {
+        return usersRepository.getByExtId(id)
     }
 
     fun save(user: User): User {
         return if (user.id != null) {
-            usersRepository.update(user)
+            usersRepository.update(user).copy(password = null, id = null)
         } else {
-            usersRepository.insert(user)
+            usersRepository.insert(user).copy(password = null, id = null)
         }
     }
 

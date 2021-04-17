@@ -28,8 +28,7 @@ PUT http://localhost:8080/api/users
 Content-Type: application/json
 
 {
-  "extId": "ed50e8e9-d528-40da-b451-44787a2185a6",
-  "name": "Viktor Borbély",
+  "name": "Viktor Borbély #2",
   "email": "vborbely+3@example.com",
   "password": "password123",
   "profilePhoto": "profile URL"
