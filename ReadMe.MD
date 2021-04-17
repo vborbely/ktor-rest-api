@@ -27,8 +27,8 @@ project-root
 
 __Dealing with JSON__
 
-implementation("io.ktor:ktor-serialization:$ktor_version")
-implementation("io.ktor:ktor-jackson:$ktor_version")
+- implementation("io.ktor:ktor-serialization:$ktor_version")
+- implementation("io.ktor:ktor-jackson:$ktor_version")
 
 __Dependency Injection__
 
@@ -36,13 +36,13 @@ implementation("io.insert-koin:koin-ktor:$koin_version")
 
 __Database layer__
 
-implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
-implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
-implementation("com.h2database:h2:1.4.200")
+- implementation("org.jetbrains.exposed:exposed-core:$exposed_version")
+- implementation("org.jetbrains.exposed:exposed-jdbc:$exposed_version")
+- implementation("com.h2database:h2:1.4.200")
 
 __Input validation__
 
-implementation("org.valiktor:valiktor-core:0.12.0"
+- implementation("org.valiktor:valiktor-core:0.12.0"
 
 Checks the validity of the DTO data, that comes from the user.
 
@@ -56,7 +56,7 @@ Not implemented yet. JWT infrastructure planned later. Ktor has build-in support
 
 __Build__
 
-The build.grade file is configured to build a fat JAR. It is good for Docker deployments.
+The `build.grade` file is configured to build a fat JAR. It is good for Docker deployments.
 
 The shadowJar package is used for this.
 
