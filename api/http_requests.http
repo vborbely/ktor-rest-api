@@ -1,0 +1,42 @@
+GET http://localhost:8080/
+
+###
+
+GET http://localhost:8080/api/users
+Accept: application/json
+
+###
+
+GET http://localhost:8080/api/users/1
+Accept: application/json
+
+###
+
+POST http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "name": "Viktor Borbély",
+  "email": "vborbely+2@example.com",
+  "password": "password123",
+  "profilePhoto": "profile URL"
+}
+
+###
+
+PUT http://localhost:8080/api/users
+Content-Type: application/json
+
+{
+  "extId": "ed50e8e9-d528-40da-b451-44787a2185a6",
+  "name": "Viktor Borbély",
+  "email": "vborbely+3@example.com",
+  "password": "password123",
+  "profilePhoto": "profile URL"
+}
+
+###
+
+DELETE http://localhost:8080/api/users/7575bcd3-6906-41f1-b32a-da6f2f301d73
+Accept: application/json
+
