@@ -73,3 +73,14 @@ __Run the project__
 __Error handling__
 
 The Exceptions are mapped to standard `ErrorDTO` format.
+
+Ex.
+
+```
+{
+  "code": "3000",
+  "message": "Unique index or primary key violation",
+  "details": "Unique index or primary key violation",
+  "time": "Sat, 17 Apr 2021 21:12:00 GMT"
+}
+```
