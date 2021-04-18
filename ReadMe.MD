@@ -2,7 +2,7 @@
 
 ## Basics
 
-This sample project is for creating a simple User table. For the simplicity it is utilizes __H2__ in-memory Database.
+This sample project is for administering a simple User table via CRUD operations. For the simplicity it is utilizes __H2__ in-memory Database, therefore it can be run anywhere, without installed RDBMS.
 
 ## Architecture
 
@@ -65,6 +65,10 @@ $  ./gradlew shadowJar
 
 $  java -jar build/libs/ktor-rest-api-x.y.z-all.jar
 ```
+
+__Configuration__
+
+The application can be configures (eg. port) via `application.conf` file in the /resources folder.
 
 __Run the project__
 
